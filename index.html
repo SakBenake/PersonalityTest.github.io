@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Know Your Personality</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<section>
+		<h1>WHAT DOES YOUR NAME SAYS ABOUT YOUR PERSONLITY!!</h1>	
+		<div class="topContainer"> 
+			<div class="details">
+				<label>ENTER YOUR NAME:</label>
+				<input type="text" name="" id="nameid">
+			</div>
+
+			<div class="img">
+				<img src="image.jpg" width="250" height="250" class="imgid">
+			</div>
+
+			<button>Click Me</button>
+		</div>
+	</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  	$('button').click(function(){
+   		const name = $('#nameid').val();
+   		alert(name);
+
+   		$('.imgid').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+   		const b = $('.imgid');
+   		console.log(b);
+   		
+		});
+	});
+</script>
+
+</body>
+</html>
